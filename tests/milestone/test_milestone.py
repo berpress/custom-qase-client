@@ -24,7 +24,7 @@ class TestMilestones:
     def test_get_all_milestone(self, qase, create_project):
         """
         Steps:
-        1. Create env
+        1. Create milestone
         2. Get all milestone
         3. Check response
         """
@@ -45,7 +45,7 @@ class TestMilestones:
         res_delete = qase.milestones.delete(code=create_project, uuid=id_)
         assert res_delete.status_code == 200
 
-    def test_get_specific_env(self, qase, create_project):
+    def test_get_specific_milestone(self, qase, create_project):
         """
         Steps:
         1. Create milestones

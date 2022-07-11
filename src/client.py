@@ -4,6 +4,7 @@ from src.api.custom_fields.api import CustomFieldsApi
 from src.api.defects.api import DefectsApi
 from src.api.environments.api import EnvironmentsApi
 from src.api.milestones.api import MilestoneApi
+from src.api.plans.api import PlanesApi
 from src.api.projects.api import ProjectsApi
 from src.request import Client
 
@@ -20,3 +21,4 @@ class QaseClient:
         self.defects = DefectsApi(self)
         self.environments = EnvironmentsApi(self)
         self.milestones = MilestoneApi(self)
+        self.planes = PlanesApi(self)
