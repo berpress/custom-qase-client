@@ -1,5 +1,6 @@
 from src.api.attachments.api import AttachmentsApi
 from src.api.cases.api import CasesApi
+from src.api.custom_fields.api import CustomFieldsApi
 from src.api.projects.api import ProjectsApi
 from src.request import Client
 
@@ -12,3 +13,4 @@ class QaseClient:
         self.projects = ProjectsApi(self)
         self.cases = CasesApi(self)
         self.attachments = AttachmentsApi(self)
+        self.custom_fields = CustomFieldsApi(self)
