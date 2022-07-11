@@ -20,7 +20,7 @@ class EnvironmentsApi:
             url=f"{self.app.base_path}{self._GET_ALL_ENV.format(code)}",
         )
 
-    def create(self, code: str, body: dict):
+    def create(self, code: str, body: dict) -> ResponseModel:
         """
         https://developers.qase.io/reference/create-environment
         """
@@ -30,7 +30,7 @@ class EnvironmentsApi:
             json=body,
         )
 
-    def get_specific_env(self, code: str, uuid: int):
+    def get_specific_env(self, code: str, uuid: int) -> ResponseModel:
         """
         https://developers.qase.io/reference/get-environment
         """
@@ -39,7 +39,7 @@ class EnvironmentsApi:
             url=f"{self.app.base_path}{self._GET_SPECIFIC_ENV.format(code, uuid)}",
         )
 
-    def delete(self, code: str, uuid: int):
+    def delete(self, code: str, uuid: int) -> ResponseModel:
         """
         https://developers.qase.io/reference/delete-environment
         """
@@ -48,7 +48,7 @@ class EnvironmentsApi:
             url=f"{self.app.base_path}{self._DELETE_ENV.format(code, uuid)}",
         )
 
-    def update(self, code: str, uuid: int, body: dict):
+    def update(self, code: str, uuid: int, body: dict) -> ResponseModel:
         """
         https://developers.qase.io/reference/update-environment
         """
