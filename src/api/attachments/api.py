@@ -32,7 +32,6 @@ class AttachmentsApi:
             method="POST",
             url=f"{self.app.base_path}{self._POST_UPLOAD_ATTACHMENTS.format(code)}",
             files=files,
-            headers=self.app.headers,
         )
 
     def get_all(self) -> ResponseModel:
@@ -42,7 +41,6 @@ class AttachmentsApi:
         return self.app.client.request(
             method="GET",
             url=f"{self.app.base_path}{self._GET_ALL_ATTACHMENTS}",
-            headers=self.app.headers,
         )
 
     def remove_by_hash(self, hash: str) -> ResponseModel:
@@ -52,7 +50,6 @@ class AttachmentsApi:
         return self.app.client.request(
             method="DELETE",
             url=f"{self.app.base_path}{self._DELETE_ATTACHMENTS_BY_HASH.format(hash)}",
-            headers=self.app.headers,
         )
 
     def get_by_hash(self, hash: str) -> ResponseModel:
@@ -62,5 +59,4 @@ class AttachmentsApi:
         return self.app.client.request(
             method="GET",
             url=f"{self.app.base_path}{self._GET_ATTACHMENTS_BY_HASH.format(hash)}",
-            headers=self.app.headers,
         )

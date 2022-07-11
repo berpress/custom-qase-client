@@ -19,7 +19,6 @@ class CasesApi:
             method="POST",
             url=f"{self.app.base_path}{self._POST_CREATE_CASE.format(code)}",
             json=body,
-            headers=self.app.headers,
         )
 
     def get_all(self, code: str, params: dict = None) -> ResponseModel:
@@ -30,7 +29,6 @@ class CasesApi:
             method="GET",
             url=f"{self.app.base_path}{self._GET_ALL_TEST_CASES.format(code)}",
             params=params,
-            headers=self.app.headers,
         )
 
     def get_case_by_id(self, code: str, uuid: int) -> ResponseModel:
@@ -40,7 +38,6 @@ class CasesApi:
         return self.app.client.request(
             method="GET",
             url=f"{self.app.base_path}{self._GET_CASE_BY_ID.format(code, uuid)}",
-            headers=self.app.headers,
         )
 
     def delete(self, code: str, uuid: int) -> ResponseModel:
@@ -50,7 +47,6 @@ class CasesApi:
         return self.app.client.request(
             method="DELETE",
             url=f"{self.app.base_path}{self._DELETE_CASE.format(code, uuid)}",
-            headers=self.app.headers,
         )
 
     def update(self, code: str, uuid: int, body: dict) -> ResponseModel:
@@ -61,5 +57,4 @@ class CasesApi:
             method="PATCH",
             url=f"{self.app.base_path}{self._UPDATE_CASE.format(code, uuid)}",
             json=body,
-            headers=self.app.headers,
         )

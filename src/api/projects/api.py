@@ -19,7 +19,6 @@ class ProjectsApi:
         return self.app.client.request(
             method="GET",
             url=f"{self.app.base_path}{self._GET_ALL_PROJECTS}",
-            headers=self.app.headers,
         )
 
     def create(self, body: dict) -> ResponseModel:
@@ -30,7 +29,6 @@ class ProjectsApi:
             method="POST",
             url=f"{self.app.base_path}{self._POST_CREATE_NEW_PROJECT}",
             json=body,
-            headers=self.app.headers,
         )
 
     def delete(self, code: str) -> ResponseModel:
@@ -40,7 +38,6 @@ class ProjectsApi:
         return self.app.client.request(
             method="DELETE",
             url=f"{self.app.base_path}{self._DELETE_PROJECT_BY_CODE.format(code)}",
-            headers=self.app.headers,
         )
 
     def get_project_by_code(self, code: str) -> ResponseModel:
@@ -50,7 +47,6 @@ class ProjectsApi:
         return self.app.client.request(
             method="GET",
             url=f"{self.app.base_path}{self._GET_PROJECT_BY_CODE.format(code)}",
-            headers=self.app.headers,
         )
 
     def grand_access(self, code: str, body: dict) -> ResponseModel:
@@ -61,7 +57,6 @@ class ProjectsApi:
             method="POST",
             url=f"{self.app.base_path}{self._POST_GRANT_ACCESS_PROJECT.format(code)}",
             json=body,
-            headers=self.app.headers,
         )
 
     def revoke_access(self, code: str, body: dict) -> ResponseModel:
@@ -73,5 +68,4 @@ class ProjectsApi:
             url=f"{self.app.base_path}"
             f"{self._DELETE_REVOKE_ACCESS_PROJECT.format(code)}",
             json=body,
-            headers=self.app.headers,
         )

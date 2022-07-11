@@ -10,6 +10,9 @@ class Response:
 
 
 class Client:
+    def __init__(self, headers: dict):
+        self.headers = headers
+
     s = requests.session()
 
     def request(self, method: str, url: str, **kwargs) -> ResponseModel:
@@ -22,4 +25,6 @@ class Client:
             json – (optional) A JSON serializable Python object to send in the body of the Request. # noqa
             headers – (optional) Dictionary of HTTP Headers to send with the Request.
         """
-        return Response.structure_response(self.s.request(method, url, **kwargs))
+        return Response.structure_response(
+            self.s.request(method, url, headers=self.headers, **kwargs)
+        )
