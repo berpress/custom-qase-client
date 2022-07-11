@@ -12,7 +12,7 @@ class ProjectsApi:
     _POST_GRANT_ACCESS_PROJECT = "/project/{}/access"
     _DELETE_REVOKE_ACCESS_PROJECT = "/project/{}/access"
 
-    def get_all_projects(self) -> ResponseModel:
+    def get_all(self) -> ResponseModel:
         """
         https://developers.qase.io/reference/get-projects
         """
@@ -22,7 +22,7 @@ class ProjectsApi:
             headers=self.app.headers,
         )
 
-    def create_project(self, body: dict) -> ResponseModel:
+    def create(self, body: dict) -> ResponseModel:
         """
         https://developers.qase.io/reference/create-project
         """
@@ -33,7 +33,7 @@ class ProjectsApi:
             headers=self.app.headers,
         )
 
-    def delete_project(self, code: str) -> ResponseModel:
+    def delete(self, code: str) -> ResponseModel:
         """
         https://developers.qase.io/reference/delete-project
         """

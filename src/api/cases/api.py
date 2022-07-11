@@ -11,7 +11,7 @@ class CasesApi:
     _DELETE_CASE = "/case/{}/{}"
     _UPDATE_CASE = "/case/{}/{}"
 
-    def create_case(self, code: str, body: dict) -> ResponseModel:
+    def create(self, code: str, body: dict) -> ResponseModel:
         """
         https://developers.qase.io/reference/create-case
         """
@@ -22,7 +22,7 @@ class CasesApi:
             headers=self.app.headers,
         )
 
-    def get_all_cases(self, code: str, params: dict = None) -> ResponseModel:
+    def get_all(self, code: str, params: dict = None) -> ResponseModel:
         """
         https://developers.qase.io/reference/get-cases
         """
@@ -43,7 +43,7 @@ class CasesApi:
             headers=self.app.headers,
         )
 
-    def delete_case(self, code: str, uuid: int) -> ResponseModel:
+    def delete(self, code: str, uuid: int) -> ResponseModel:
         """
         https://developers.qase.io/reference/delete-case
         """
@@ -53,7 +53,7 @@ class CasesApi:
             headers=self.app.headers,
         )
 
-    def update_case(self, code: str, uuid: int, body: dict) -> ResponseModel:
+    def update(self, code: str, uuid: int, body: dict) -> ResponseModel:
         """
         https://developers.qase.io/reference/update-case
         """

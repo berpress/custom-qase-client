@@ -11,7 +11,7 @@ class TestAllProjects:
         2. Get all projects
         3. Check project from step 1
         """
-        res = qase.projects.get_all_projects()
+        res = qase.projects.get_all()
         assert res.status_code == 200
         results: list = res.body.get("result").get("entities")
         is_find_code = any(
@@ -41,7 +41,7 @@ class TestAllProjects:
         """
         code = fake.first_name()
         body = {"title": f"{code}_title", "code": code, "access": "all"}
-        res = qase.projects.create_project(body=body)
+        res = qase.projects.create(body=body)
         assert res.status_code == 200
-        res_delete = qase.projects.delete_project(code=code.upper())
+        res_delete = qase.projects.delete(code=code.upper())
         assert res_delete.status_code == 200

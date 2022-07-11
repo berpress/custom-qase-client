@@ -1,3 +1,4 @@
+from src.api.attachments.api import AttachmentsApi
 from src.api.cases.api import CasesApi
 from src.api.projects.api import ProjectsApi
 from src.request import Client
@@ -9,10 +10,11 @@ class QaseClient:
         self.api_token = api_token
         self.base_path = base_path
         self.headers = {
-            "Accept": "application/json",
-            "Content-Type": "application/json",
+            # "Accept": "application/json",
+            # "Content-Type": "application/json",
             "Token": self.api_token,
         }
 
         self.projects = ProjectsApi(self)
         self.cases = CasesApi(self)
+        self.attachments = AttachmentsApi(self)

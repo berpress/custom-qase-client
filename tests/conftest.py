@@ -18,9 +18,9 @@ def qase():
 @pytest.fixture()
 def create_project(qase):
     code = fake.first_name()
-    body = {"title": f"{code}_title", "code": code, "access": "all"}
-    res = qase.projects.create_project(body=body)
+    body = {"title": f"{code} test project", "code": code, "access": "all"}
+    res = qase.projects.create(body=body)
     assert res.status_code == 200
     yield code.upper()
-    res_delete = qase.projects.delete_project(code=code.upper())
+    res_delete = qase.projects.delete(code=code.upper())
     assert res_delete.status_code == 200
