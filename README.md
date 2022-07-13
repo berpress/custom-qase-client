@@ -1,4 +1,10 @@
 # custom-qase-client
+
+Install
+```angular2html
+pip install cqase-client
+```
+
 This is an unofficial client [QASE](https://qase.io)
 
 Official client: https://github.com/qase-tms/qase-python
@@ -13,9 +19,11 @@ First, get api token from page https://app.qase.io/user/api/token (See guide)
 For body and params use dict type, like in [requests](https://requests.readthedocs.io/en/latest/user/quickstart/#more-complicated-post-requests) library
 
 ```python
+from src.client import QaseClient
+
 client = QaseClient(api_token='YOUR_API_TOKEN')
 
-code = 'TEST_CODE' #projecet code
+code = 'CODE' #projecet code
 # create project
 body = {'title': f'Title test project', 'code': code, 'access': 'all'}
 client.projects.create(body=body)
