@@ -1,13 +1,13 @@
-from src.api.attachments.api import AttachmentsApi
-from src.api.cases.api import CasesApi
-from src.api.custom_fields.api import CustomFieldsApi
-from src.api.defects.api import DefectsApi
-from src.api.environments.api import EnvironmentsApi
-from src.api.milestones.api import MilestoneApi
-from src.api.plans.api import PlanesApi
-from src.api.projects.api import ProjectsApi
-from src.api.results.api import ResultsApi
-from src.api.runs.api import RunsApi
+from src.api.attachments import AttachmentsApi
+from src.api.cases import CasesApi
+from src.api.custom_fields import CustomFieldsApi
+from src.api.defects import DefectsApi
+from src.api.environments import EnvironmentsApi
+from src.api.milestones import MilestoneApi
+from src.api.plans import PlanesApi
+from src.api.projects import ProjectsApi
+from src.api.results import ResultsApi
+from src.api.runs import RunsApi
 from src.request import Client
 
 
