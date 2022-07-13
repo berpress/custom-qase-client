@@ -14,7 +14,7 @@ from src.request import Client
 
 
 class QaseClient:
-    def __init__(self, api_token: str, base_path: str):
+    def __init__(self, api_token: str, base_path: str = "https://api.qase.io/v1"):
         self.client = Client(headers={"Token": api_token})
         self.base_path = base_path
 
