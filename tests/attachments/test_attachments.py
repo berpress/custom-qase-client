@@ -1,3 +1,7 @@
+import pytest
+
+
+@pytest.mark.skip
 class TestAttachments:
     def test_upload_attachments(self, qase, create_project):
         """

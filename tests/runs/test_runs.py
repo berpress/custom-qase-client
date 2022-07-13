@@ -3,7 +3,7 @@ from faker import Faker
 fake = Faker()
 
 
-class TestCases:
+class TestRuns:
     def test_create_run(self, qase, create_project):
         """
         Steps:
