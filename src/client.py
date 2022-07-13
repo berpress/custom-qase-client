@@ -8,6 +8,7 @@ from src.api.plans import PlanesApi
 from src.api.projects import ProjectsApi
 from src.api.results import ResultsApi
 from src.api.runs import RunsApi
+from src.api.shared_steps import SharedStepsApi
 from src.request import Client
 
 
@@ -26,3 +27,4 @@ class QaseClient:
         self.planes = PlanesApi(self)
         self.runs = RunsApi(self)
         self.results = ResultsApi(self)
+        self.shared_steps = SharedStepsApi(self)
