@@ -37,7 +37,7 @@ from cqase.client import QaseClient
 
 client = QaseClient(api_token='YOUR_API_TOKEN')
 
-code = 'CODE'  # projecet code
+code = 'CODE'  # project code
 # create project
 body = {'title': f'Title test project', 'code': code, 'access': 'all'}
 client.projects.create(body=body)
