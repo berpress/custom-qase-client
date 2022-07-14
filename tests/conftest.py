@@ -17,7 +17,7 @@ def pytest_addoption(parser):
 
 @pytest.fixture(scope="session")
 def qase(request):
-    api_token = request.config.getoption("--core-url")
+    api_token = request.config.getoption("--api-token")
     url = "https://api.qase.io/v1"
     client = QaseClient(api_token=api_token, base_path=url)
     yield client
