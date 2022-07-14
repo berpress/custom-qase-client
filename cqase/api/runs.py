@@ -31,13 +31,14 @@ class RunsApi:
             json=body,
         )
 
-    def get_run(self, code: str, uuid: int) -> ResponseModel:
+    def get_run(self, code: str, uuid: int, params: dict = None) -> ResponseModel:
         """
         https://developers.qase.io/reference/get-run
         """
         return self.app.client.request(
             method="GET",
             url=f"{self.app.base_path}" f"{self._GET_SPECIFIC_RUNS.format(code, uuid)}",
+            params=params,
         )
 
     def delete(self, code: str, uuid: int) -> ResponseModel:
