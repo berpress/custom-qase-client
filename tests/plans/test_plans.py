@@ -113,7 +113,7 @@ class TestPlans:
         body_update = {
             "title": f"{fake.first_name()} test plane",
         }
-        res_update_plans = qase.planes.update(
+        res_update_plans = qase.plans.update(
             code=create_project, uuid=id_, body=body_update
         )
         assert res_update_plans.status_code == 200
