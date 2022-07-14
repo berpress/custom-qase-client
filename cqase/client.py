@@ -4,7 +4,7 @@ from cqase.api.custom_fields import CustomFieldsApi
 from cqase.api.defects import DefectsApi
 from cqase.api.environments import EnvironmentsApi
 from cqase.api.milestones import MilestoneApi
-from cqase.api.plans import PlanesApi
+from cqase.api.plans import PlansApi
 from cqase.api.projects import ProjectsApi
 from cqase.api.results import ResultsApi
 from cqase.api.runs import RunsApi
@@ -25,7 +25,7 @@ class QaseClient:
         self.defects = DefectsApi(self)
         self.environments = EnvironmentsApi(self)
         self.milestones = MilestoneApi(self)
-        self.planes = PlanesApi(self)
+        self.plans = PlansApi(self)
         self.runs = RunsApi(self)
         self.results = ResultsApi(self)
         self.shared_steps = SharedStepsApi(self)

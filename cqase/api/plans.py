@@ -1,7 +1,7 @@
 from cqase.models import ResponseModel
 
 
-class PlanesApi:
+class PlansApi:
     def __init__(self, app):
         self.app = app
 
