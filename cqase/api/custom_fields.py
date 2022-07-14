@@ -1,4 +1,4 @@
-from src.models import ResponseModel
+from cqase.models import ResponseModel
 
 
 class CustomFieldsApi:

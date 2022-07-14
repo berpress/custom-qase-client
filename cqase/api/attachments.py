@@ -2,8 +2,8 @@ import ntpath
 
 from typing import Union, Tuple
 
-from src.common.file_type import FileInfo
-from src.models import ResponseModel
+from cqase.common.file_type import FileInfo
+from cqase.models import ResponseModel
 
 
 class AttachmentsApi:

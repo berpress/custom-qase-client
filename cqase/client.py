@@ -1,16 +1,16 @@
-from src.api.attachments import AttachmentsApi
-from src.api.cases import CasesApi
-from src.api.custom_fields import CustomFieldsApi
-from src.api.defects import DefectsApi
-from src.api.environments import EnvironmentsApi
-from src.api.milestones import MilestoneApi
-from src.api.plans import PlanesApi
-from src.api.projects import ProjectsApi
-from src.api.results import ResultsApi
-from src.api.runs import RunsApi
-from src.api.shared_steps import SharedStepsApi
-from src.api.suites import SuitesApi
-from src.request import Client
+from cqase.api.attachments import AttachmentsApi
+from cqase.api.cases import CasesApi
+from cqase.api.custom_fields import CustomFieldsApi
+from cqase.api.defects import DefectsApi
+from cqase.api.environments import EnvironmentsApi
+from cqase.api.milestones import MilestoneApi
+from cqase.api.plans import PlanesApi
+from cqase.api.projects import ProjectsApi
+from cqase.api.results import ResultsApi
+from cqase.api.runs import RunsApi
+from cqase.api.shared_steps import SharedStepsApi
+from cqase.api.suites import SuitesApi
+from cqase.request import Client
 
 
 class QaseClient:

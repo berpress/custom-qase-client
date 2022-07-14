@@ -1,9 +1,5 @@
 # custom-qase-client
 
-Install
-```angular2html
-pip install cqase-client
-```
 
 This is an unofficial client [QASE](https://qase.io)
 
@@ -13,17 +9,33 @@ API QASE: https://developers.qase.io/reference/
 
 Guide: https://developers.qase.io/docs
 
-#### How to work
+### Installation
+
+------------
+
+You can install via pip
+```
+$ pip install cqase-client
+```
+or with poetry
+```
+$ poetry add -D cqase-client
+```
+
+### How to work
+
+------------
+
 First, get api token from page https://app.qase.io/user/api/token (See guide)
 
 For body and params use dict type, like in [requests](https://requests.readthedocs.io/en/latest/user/quickstart/#more-complicated-post-requests) library
 
 ```python
-from src.client import QaseClient
+from cqase.client import QaseClient
 
 client = QaseClient(api_token='YOUR_API_TOKEN')
 
-code = 'CODE' #projecet code
+code = 'CODE'  # projecet code
 # create project
 body = {'title': f'Title test project', 'code': code, 'access': 'all'}
 client.projects.create(body=body)
