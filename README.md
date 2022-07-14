@@ -1,5 +1,7 @@
+[![Python tests](https://github.com/berpress/custom-qase-client/actions/workflows/python-app.yml/badge.svg)](https://github.com/berpress/custom-qase-client/actions/workflows/python-app.yml)
+![versions](https://img.shields.io/pypi/pyversions/pybadges.svg)
+[![Downloads](https://static.pepy.tech/personalized-badge/cqase-client?period=total&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/cqase-client)
 # custom-qase-client
-
 
 This is an unofficial client [QASE](https://qase.io)
 
@@ -59,5 +61,3 @@ client.attachments.upload(code, "./cat.jpeg")
 client.runs.complete(code=code, uuid=1)
 
 ```
-
-In work ...
